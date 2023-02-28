@@ -1,0 +1,73 @@
+#comics {
+
+
+    #main-top {
+        background-color: $grey;
+        min-height: 150px;
+
+
+        .series-title {
+            position: absolute;
+            bottom: 95%;
+            left: 0;
+            color: white;
+            padding: 10px 30px;
+            background-color: $blue;
+            display: inline-block;
+        }
+
+        .series-container {
+            padding-top: 50px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .load-more-button {
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 50px;
+            background-color: $blue;
+            font-weight: bold;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .series-col {
+            text-transform: uppercase;
+            color: white;
+            padding: 1rem;
+            flex-basis: calc(100% / 6);
+
+            * {
+
+                cursor: pointer;
+            }
+
+            figure {
+                height: 180px;
+                overflow: hidden;
+
+                img {
+                    height: auto;
+                    width: 180px;
+                }
+            }
+
+            p {
+                padding: 10px 0;
+            }
+        }
+
+        .container {
+            height: 100%;
+            position: relative;
+        }
+    }
+}
