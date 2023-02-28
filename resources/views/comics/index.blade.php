@@ -15,11 +15,13 @@
                 @foreach ($comics as $comic)
                     
                     <div class="series-col">
-                      <figure>
-                        <img src="{{ $comic['thumb']}}" alt="">
-                      </figure>
-                      <p>{{ $comic['series']}}</p>
-                    </div>
+                      <a href="{{ route('comics.show', $comic->id)}}">
+                        <figure>
+                          <img src="{{ $comic['thumb']}}" alt="">
+                        </figure>
+                      </a>
+                        <p>{{ $comic['series']}}</p>
+                      </div>
                 @endforeach
                 </div>
                 {{-- BUTTON --}}
