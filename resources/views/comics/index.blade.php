@@ -6,8 +6,8 @@
   <section id="main-top">
             <div class="container">
             {{-- TITLE --}}
-                <div class="series-title">
-                    <h1> CURRENT SERIES </h1>
+                <div class="series-title rounded">
+                    <h3> CURRENT SERIES </h3>
                 </div>
 
                 {{-- CONTAINER --}}
@@ -26,7 +26,7 @@
                 </div>
                 {{-- BUTTON --}}
                 <div class="load-more-button">
-                <button>LOAD MORE</button>
+                <a href="{{ route('comics.create')}}" class="button">Aggiungi nuovo</a>
                 </div>
 
             </div>

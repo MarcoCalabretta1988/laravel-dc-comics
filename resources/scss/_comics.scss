@@ -8,12 +8,16 @@
 
         .series-title {
             position: absolute;
-            bottom: 95%;
+            bottom: 98%;
             left: 0;
             color: white;
-            padding: 10px 30px;
+            padding: 5px 20px;
             background-color: $blue;
             display: inline-block;
+
+            h3 {
+                margin: 0;
+            }
         }
 
         .series-container {
@@ -30,7 +34,7 @@
             padding: 20px;
         }
 
-        button {
+        .button {
             padding: 10px 50px;
             background-color: $blue;
             font-weight: bold;

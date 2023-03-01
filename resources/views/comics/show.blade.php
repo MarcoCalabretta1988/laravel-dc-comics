@@ -3,18 +3,19 @@
 
 @section ('content')
 <section id="comics-detail" class="container">
-
+{{-- 
     <div class="thumb">
         <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
     </div>
+     --}}
     <div class="row">
-        <div class="col-content">
+        <div class=" col col-content">
             {{-- TITOLE --}}
-          <h1>{{$comic->title}}</h1>
+          <h2>{{$comic->title}}</h2>
 
           {{-- PRICE BOX --}}
-          <div class='price-box'>
-            <div class='price'>
+          <div class='price-box mb-3'>
+            <div class='price '>
                 <p>U.S.Price: <strong class='comic-price'>{{ $comic->price}}</strong></p>
                 <strong>AVAILABLE</strong>
             </div>
@@ -30,14 +31,14 @@
        </div>
 
         {{-- ADVERTISEMENT --}}
-        <div class="col-advertisement">
+        <div class=" col-3 col-advertisement">
             <h4>ADVERTISEMENT</h4>
             <img src="{{ Vite::asset('resources/images/adv.jpg')}}" alt="Advertisement">
         </div>
     </div >
 
-    <div class="row">
-        <div class="talent">
+    <div class="row my-5">
+        <div class="col-6">
             <h3>Talent</h3>
             <div class="col-talent">
                 <div class="artists">
@@ -52,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="specs">
+        <div class="col-6">
             <h3>Specs</h3>
             <div class="col-specs">
                 <div class="series"><strong>Series : </strong>{{$comic->series}}</div>

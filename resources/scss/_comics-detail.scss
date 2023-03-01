@@ -22,14 +22,13 @@
     }
 
     .row {
-        display: flex;
-        justify-content: space-between;
+
 
 
         .col-content {
-            flex-basis: 70%;
 
-            h1 {
+
+            h2 {
                 margin: 20px 0;
 
             }
@@ -41,7 +40,7 @@
                 background-color: #55BA59;
                 border: 1px solid black;
                 color: #BAF980;
-                margin: 10px 0;
+
 
                 .price {
                     flex-basis: 80%;
@@ -53,6 +52,10 @@
 
                     .comic-price {
                         color: white;
+                    }
+
+                    p {
+                        margin: 0;
                     }
                 }
 
@@ -68,40 +71,30 @@
         }
 
         .col-advertisement {
-            padding: 20px;
+
             text-align: end;
         }
 
-        .talent {
-            flex-basis: 50%;
-            padding: 30px 0;
 
-            .col-talent {
+        .col-talent {
 
-                margin: 10px 0;
+            margin: 10px 0;
 
-                p {
-                    margin: 5px 0;
-                    font-weight: bold;
-                }
-
-                address {
-                    color: blue;
-                }
-
-
-
+            p {
+                margin: 5px 0;
+                font-weight: bold;
             }
+
+            address {
+                color: $blue;
+            }
+
+
+
         }
 
-        .specs {
-            flex-basis: 50%;
-            padding: 0 10px;
 
-            div {
-                margin: 15px 0;
-            }
-        }
+
     }
 
 
