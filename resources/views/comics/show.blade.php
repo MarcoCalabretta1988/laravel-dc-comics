@@ -2,12 +2,14 @@
 @section ('title', "$comic->series")
 
 @section ('content')
-<section id="comics-detail" class="container">
-{{-- 
+
+<section id="comics-detail" >
     <div class="thumb">
-        <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
+        <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="img-fluid"> 
     </div>
-     --}}
+  <div class="container">
+
+
     <div class="row">
         <div class=" col col-content">
             {{-- TITOLE --}}
@@ -64,6 +66,6 @@
     </div>
         
   <a href="{{ route('comics.index')}}" class='button'>Torna indietro</a>
-
+</div>
 </section>
 @endsection

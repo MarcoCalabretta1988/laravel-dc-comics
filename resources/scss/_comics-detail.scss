@@ -1,7 +1,6 @@
 #comics-detail {
-    margin: 50px auto;
-    text-align: start;
-    position: relative;
+
+    margin-bottom: 50px;
 
     .button {
         background-color: #55BA59;
@@ -9,15 +8,20 @@
     }
 
     .thumb {
-        position: absolute;
-        bottom: 600px;
-        left: 32px;
-        width: 150px;
-        height: 230px;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background-color: $blue;
+        margin-bottom: 50px;
 
         img {
-            max-width: 100%;
-            height: 100%;
+            position: absolute;
+            bottom: 20px;
+            left: 250px;
+            height: 250px;
+
         }
     }
 
@@ -93,7 +97,11 @@
 
         }
 
-
+        .col-specs {
+            .series {
+                margin: 10px 0;
+            }
+        }
 
     }
 
