@@ -40,6 +40,7 @@
             font-weight: bold;
             color: white;
             border: none;
+            border-radius: 10px;
             cursor: pointer;
         }
 
@@ -54,8 +55,9 @@
             }
 
             figure {
-                height: 180px;
+                height: 280px;
                 overflow: hidden;
+                margin: 0;
 
                 img {
                     height: auto;
@@ -63,9 +65,7 @@
                 }
             }
 
-            p {
-                padding: 10px 0;
-            }
+
         }
 
         .container {

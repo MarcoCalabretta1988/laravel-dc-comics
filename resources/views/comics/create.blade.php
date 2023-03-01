@@ -78,6 +78,7 @@
       </div>
       <div class="col-2 my-4">
         <button type="submit" class="btn btn-primary">Create</button>
+        <a href="{{route('comics.index')}}" class="btn btn-success">Back</a>
       </div>
         
       </div>

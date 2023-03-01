@@ -39,7 +39,7 @@
         </div>
     </div >
 
-    <div class="row my-5">
+    <div class="row my-3">
         <div class="col-6">
             <h3>Talent</h3>
             <div class="col-talent">
@@ -65,7 +65,7 @@
         </div>
     </div>
         
-  <a href="{{ route('comics.index')}}" class='button'>Torna indietro</a>
+  <a href="{{ route('comics.index')}}" class='button text-white'>Torna indietro</a>
 </div>
 </section>
 @endsection
