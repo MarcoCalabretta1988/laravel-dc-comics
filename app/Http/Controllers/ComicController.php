@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+
 
 
 class ComicController extends Controller
@@ -30,7 +32,32 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate(
+            [
+                'title' => 'required|string|unique:comics',
+                'series' => 'required|string',
+                'thumb' => 'required|string',
+                'price' => 'required|string',
+                'sale_date' => 'string',
+                'type' => 'required|string',
+                'description' => 'string',
+                'artists' => 'string|required',
+                'writers' => 'string|required',
+            ],
+            [
+                'title.unique' => "Il titolo $request->title é già presente",
+                'title.required' => 'Il campo title è obbligatorio',
+                'series.required' => 'Il campo series è obbligatorio',
+                'thumb.required' => 'Il campo thumb è obbligatorio',
+                'price.required' => 'Il campo price è obbligatorio',
+                'type.required' => 'Il campo type è obbligatorio',
+                'artists.required' => 'Il campo artists è obbligatorio',
+                'writers.required' => 'Il campo writers è obbligatorio',
+            ]
+        );
         $data = $request->all();
+
         $comic = new Comic();
         $comic->fill($data);
         $comic->save();
@@ -59,9 +86,30 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $request->validate(
+            [
+                'title' => ['required', 'string', Rule::unique('comics')->ignore($comic->id)],
+                'series' => 'required|string',
+                'thumb' => 'required|string',
+                'price' => 'required|string',
+                'sale_date' => 'string',
+                'type' => 'required|string',
+                'description' => 'string',
+                'artists' => 'string|required',
+                'writers' => 'string|required',
+            ],
+            [
+                'title.unique' => "Il titolo $request->title é già presente",
+                'title.required' => 'Il campo title è obbligatorio',
+                'series.required' => 'Il campo series è obbligatorio',
+                'thumb.required' => 'Il campo thumb è obbligatorio',
+                'price.required' => 'Il campo price è obbligatorio',
+                'type.required' => 'Il campo type è obbligatorio',
+                'artists.required' => 'Il campo artists è obbligatorio',
+                'writers.required' => 'Il campo writers è obbligatorio',
+            ]
+        );
         $data = $request->all();
-        // TODO VALIDAZIONE
-
         $comic->fill($data);
         $comic->save();
 

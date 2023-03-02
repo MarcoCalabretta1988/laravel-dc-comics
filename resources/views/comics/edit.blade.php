@@ -5,8 +5,17 @@
 <section id="comics-forum ">
   <div class="container my-5 border border-primary rounded bg-secondary text-white">
     <h2 class="text-center mt-5 fw-bold">EDIT COMIC</h2>
-
-    <form action="{{ route ('comics.update',$comic->id)}}" method="POST">
+    @if ($errors->any())
+    <div class="alert alert-danger" role="alert">
+       <ul>
+        @foreach ($errors->all() as $error )
+        <li>{{$error}}</li>
+            
+        @endforeach
+       </ul>
+      </div>
+      @endif
+    <form action="{{ route ('comics.update',$comic->id)}}" method="POST" >
         @method('PUT')
       @csrf
       <div class="row m-5">
