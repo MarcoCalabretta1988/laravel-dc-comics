@@ -69,7 +69,9 @@
             <a href="{{ route('comics.index')}}" class='button text-white'>Torna indietro</a>
             <div class="d-flex justify-content-between align-items-center">
                 <a href="{{ route('comics.edit',$comic->id)}}" class="btn btn-primary me-2" >Edit</a>
-                <form action="">
+                <form action="{{ route('comics.destroy', $comic->id)}}" method="POST">
+                    @method('DELETE')
+                    @csrf
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
               </div>

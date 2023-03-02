@@ -4,7 +4,13 @@
 @section ('content')
 <section id="comics">
   <section id="main-top">
-            <div class="container">
+            <div class="container py-5">
+              @if(session('delete'))
+
+              <div class="alert alert-success" role="alert">
+                {{session('delete')}}
+              </div>
+              @endif
             {{-- TITLE --}}
                 <div class="series-title rounded">
                     <h3> CURRENT SERIES </h3>
@@ -12,6 +18,7 @@
 
                 {{-- CONTAINER --}}
                 <div class="series-container ">
+                
                 @foreach ($comics as $comic)
                     
                     <div class="series-col">
@@ -23,7 +30,11 @@
                         <p>{{ $comic['series']}}</p>
                         <div id="editor-button">
                           <a href="{{ route('comics.edit',$comic->id)}}" class="btn btn-primary" >Edit</a>
-                          <a href="" class="btn btn-danger">Delete</a>
+                          <form action="{{ route('comics.destroy', $comic->id)}}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
                         </div>
                       </div>
                 @endforeach
