@@ -64,8 +64,15 @@
             </div>
         </div>
     </div>
-        
-  <a href="{{ route('comics.index')}}" class='button text-white'>Torna indietro</a>
+        <div class="button-container d-flex justify-content-between">
+
+            <a href="{{ route('comics.index')}}" class='button text-white'>Torna indietro</a>
+            <div id="editor-button">
+                <a href="{{ route('comics.edit',$comic->id)}}" class="btn btn-primary" >Edit</a>
+                <a href="" class="btn btn-danger">Delete</a>
+              </div>
+        </div>
+ 
 </div>
 </section>
 @endsection

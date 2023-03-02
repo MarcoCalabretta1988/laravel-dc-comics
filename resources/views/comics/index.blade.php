@@ -11,7 +11,7 @@
                 </div>
 
                 {{-- CONTAINER --}}
-                <div class="series-container">
+                <div class="series-container ">
                 @foreach ($comics as $comic)
                     
                     <div class="series-col">
@@ -21,6 +21,10 @@
                         </figure>
                       </a>
                         <p>{{ $comic['series']}}</p>
+                        <div id="editor-button">
+                          <a href="{{ route('comics.edit',$comic->id)}}" class="btn btn-primary" >Edit</a>
+                          <a href="" class="btn btn-danger">Delete</a>
+                        </div>
                       </div>
                 @endforeach
                 </div>

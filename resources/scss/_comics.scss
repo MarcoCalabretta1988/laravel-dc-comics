@@ -26,6 +26,8 @@
             display: flex;
             flex-wrap: wrap;
 
+
+
         }
 
         .load-more-button {
@@ -49,6 +51,15 @@
             color: white;
             padding: 1rem;
             flex-basis: calc(100% / 6);
+
+            #editor-button {
+                display: none;
+            }
+
+            &:hover #editor-button {
+                display: flex;
+                justify-content: space-around;
+            }
 
             a {
                 color: white;
